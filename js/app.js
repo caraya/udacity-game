@@ -1,28 +1,28 @@
 // TODO: Figure out why clearMessage() is not clearing the text
 // TODO: Place the text over the board with styled colors and text
 // TODO: Remove comments from gameOver() and clearMessage() and from the functions in prototype.reset
-// function gameOver () {
-//   var div = document.createElement('div');
-//   div.className = 'message';
-//
-//   div.innerHTML = '<h1>Game Over</h1>';
-//
-//   document.documentElement.appendChild(div);
-// }
-//
-// function clearMessage () {
-//   var body = document.body,
-//       div = document.querySelector('.message');
-//   div.style.visibility = "hidden";
-//   body.removeChild(div);
-// }
+function gameOver () {
+  var div = document.createElement('div');
+  div.className = 'message';
+
+  div.innerHTML = '<h1>Game Over</h1>';
+
+  document.documentElement.appendChild(div);
+}
+
+function clearMessage () {
+  var body = document.body,
+  div = document.querySelector('.message');
+  div.style.visibility = "hidden";
+  body.removeChild(div);
+}
 
 //Reset player to beginning position
 Object.prototype.reset = function() {
-  // gameOver();
+  gameOver();
   player.x = 200;
   player.y = 400;
-  // clearMessage();
+  clearMessage();
 };
 
 // Enemies our player must avoid
