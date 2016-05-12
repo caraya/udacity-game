@@ -2,6 +2,14 @@
 
 This is my Frogger clone created for Udacity's Frontend Nanodegree program's arcade game clone.
 
+## Run the application
+
+Download or clone the repository from Github:
+
+```
+
+
+Load the application on your favorite web server. If you're running this locally you can use a local web server such as MAMP or XAMP and place
 
 ## Files description
 

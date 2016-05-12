@@ -1,10 +1,10 @@
-//Reimplementing gameOver() function based on Feedback from Udacity coach, TY. 
-//Old clear message was targetting the wrong element so it would barf and freeze
+//Reimplementing gameOver() function based on Feedback from coach TY.
+//Old clear message was targeting the wrong element so it would barf and freeze
 function gameOver () {
   var div = document.createElement('div');
 
   div.id = 'message';
-  div.innerHTML = '<h1>Game Over</h1>';
+  div.innerHTML = '<h2>Game Over</h2>';
 
   document.body.appendChild(div);
 
@@ -15,10 +15,11 @@ function gameOver () {
 
 //Reset player to beginning position
 Object.prototype.reset = function() {
-  gameOver();
   player.x = 200;
   player.y = 400;
+  gameOver();
 };
+
 
 // Enemies our player must avoid
 var Enemy = function(x, y) {
@@ -87,18 +88,18 @@ Player.prototype.render = function() {
 
 
 Player.prototype.update = function() {
-  // TODO: Can we do this with a swtich statement?
+  // FIXME: Can we do this with a swtich statement?
   //if left key is pressed and player is not on edge of map, pressed decrement x
   if(this.ctlKey === 'left' && this.x > 0){
     this.x = this.x - 50;
-    //if right key is pressed and player is not on edge of map increment x
-  }else if(this.ctlKey === 'right' && this.x != 400){
+    //if r ight key is pressed and player is not on edge of map increment x
+  } else if(this.ctlKey === 'right' && this.x != 400){
     this.x = this.x + 50;
     //if up key is pressed increment y
-  }else if(this.ctlKey === 'up'){
+  } else if(this.ctlKey === 'up'){
     this.y = this.y - 50;
     //if down key is pressed and player is not on edge of map decrement y
-  }else if (this.ctlKey === 'down' && this.y != 400){
+  } else if (this.ctlKey === 'down' && this.y != 400){
     this.y = this.y + 50;
   }
   this.ctlKey = null;
