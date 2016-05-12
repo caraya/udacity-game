@@ -7,9 +7,22 @@ This is my Frogger clone created for Udacity's Frontend Nanodegree program's arc
 Download or clone the repository from Github:
 
 ```
+git clone https://github.com/caraya/udacity-game.git
+```
 
+Load the application on your favorite web server. If you're running this locally you can use a local web server such as MAMP or XAMP and place the downloaded directory under the document root.
 
-Load the application on your favorite web server. If you're running this locally you can use a local web server such as MAMP or XAMP and place
+If you have Python installed on your system you can run Python's built in web server. The specific command depends on the version of Python you have installed. For Python 2.x the command is:
+
+```
+python -m SimpleHTTPServer 8000
+```
+
+For Python 3.x the command is:
+
+```
+python -m http.server 8000
+```
 
 ## Files description
 
